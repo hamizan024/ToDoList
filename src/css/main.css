@@ -146,5 +146,16 @@ body {
 
 .card .btns{
     position: absolute;
-    
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.card .btns button {
+    border-radius: 20%;
+    border: none;
+    margin: 0 0.6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #271c6c;
+    background-color: transparent;
 }
