@@ -36,6 +36,7 @@ const Todos = (props) => {
         type="text"
         onChange={(e) => handleChange(e)}
         className="todo-input"
+        value={todo}
       />
 
       <button

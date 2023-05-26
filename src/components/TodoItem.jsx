@@ -34,14 +34,15 @@ const TodoItem = (props) => {
           {" "}
           <AiFillEdit />{" "}
         </button>
-        <button 
-        style={{color:"green"}}
-        onClick={() => CompleteTodo(item.id)}>
-          <IoCheckmarkDoneSharp />
-        </button>
-        <button 
-        style={{color:"red"}}
-        onClick={() => removeTodo(item.id)}>
+        {item.completed === false && (
+          <button
+            style={{ color: "green" }}
+            onClick={() => CompleteTodo(item.id)}
+          >
+            <IoCheckmarkDoneSharp />
+          </button>
+        )}
+        <button style={{ color: "red" }} onClick={() => removeTodo(item.id)}>
           {" "}
           <IoClose />
         </button>{" "}
