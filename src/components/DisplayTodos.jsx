@@ -48,6 +48,36 @@ const DisplayTodos = (props) => {
               );
             })
           : null}
+        {/*item complete*/}
+        {props.todos.length > 0 && sort === "completed"
+          ? props.todos.map((item) => {
+              return (
+                item.completed === true && (
+                  <TodoItem
+                    key={TodoItem.id}
+                    item={item}
+                    removeTodo={props.removeTodo}
+                    updateTodo={props.updateTodo}
+                    completeTodo={props.completeTodo}
+                  />
+                )
+              );
+            })
+          : null}
+        {/*all item*/}
+        {props.todos.length > 0 && sort === "all"
+          ? props.todos.map((item) => {
+              return (
+                <TodoItem
+                  key={TodoItem.id}
+                  item={item}
+                  removeTodo={props.removeTodo}
+                  updateTodo={props.updateTodo}
+                  completeTodo={props.completeTodo}
+                />
+              );
+            })
+          : null}
       </ul>
     </div>
   );

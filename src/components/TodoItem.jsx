@@ -28,7 +28,7 @@ const TodoItem = (props) => {
         onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
       />
       <button onClick={() => changeFocus()}>Edit</button>
-      <button onClick={() => completeTodo(item.id)}>Complete</button>
+      <button onClick={() => CompleteTodo(item.id)}>Complete</button>
       <button onClick={() => removeTodo(item.id)}>Delete</button>{" "}
     </li>
   );
